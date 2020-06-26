@@ -1,3 +1,4 @@
 ps-kotlin.iml
 lib/*
 .idea/*
+out/*
