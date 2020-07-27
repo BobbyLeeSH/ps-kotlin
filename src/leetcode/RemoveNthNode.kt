@@ -29,9 +29,9 @@ class RemoveNthNode {
         curr?.next = temp?.next
         return head
     }
-}
 
-data class ListNode(
-        var `val`: Int,
-        var next: ListNode?
-)
+    data class ListNode(
+            var `val`: Int,
+            var next: ListNode?
+    )
+}
