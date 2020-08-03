@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Permutations {
-    private List<List<Integer>> FINAL = new ArrayList<>();
+    private final List<List<Integer>> FINAL = new ArrayList<>();
 
     public List<List<Integer>> permute(int[] nums) {
         perm(nums, new ArrayList<>());
