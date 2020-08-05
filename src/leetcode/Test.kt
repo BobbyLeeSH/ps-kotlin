@@ -2,8 +2,8 @@ package leetcode
 
 fun main() {
     // to test out in console
-    val test = MergeIntervals()
-    val ans = test.merge(arrayOf(intArrayOf(1, 3), intArrayOf(2, 6), intArrayOf(8, 10), intArrayOf(15, 18)))
+    val test = Subsets()
+    val ans = test.subsets(intArrayOf(1, 2, 3))
 
     println(ans)
 }
