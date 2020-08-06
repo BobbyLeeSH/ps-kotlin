@@ -2,8 +2,8 @@ package leetcode
 
 fun main() {
     // to test out in console
-    val test = Subsets()
-    val ans = test.subsets(intArrayOf(1, 2, 3))
+    val test = LargestRectangleInHistogram()
+    val ans = test.largestRectangleArea(intArrayOf(2, 1, 2))
 
     println(ans)
 }
