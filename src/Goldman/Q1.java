@@ -1,27 +1,44 @@
-package Goldman;
+package goldman;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Q1 {
 
-    public static String findNumber(List<Integer> arr, int k) {
-        // Write your code here
-        for (int v : arr) {
-            if (v == k) return "YES";
-        }
+    /*
+     * Complete the 'condense' function below.
+     *
+     * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+     * The function accepts INTEGER_SINGLY_LINKED_LIST head as parameter.
+     */
 
-        return "NO";
+
+    public static SinglyLinkedListNode condense(SinglyLinkedListNode head) {
+        Set<Integer> set = new HashSet<>();
+        if (head == null) return null;
+
+        SinglyLinkedListNode curr = head;
+        set.add(curr.data);
+
+        while (curr.next != null) {
+            int data = curr.next.data;
+            System.out.println(data);
+            if (set.contains(data)) {
+                curr.next = curr.next.next;
+                if (curr.next == null) {
+                    if (set.contains(curr.data)) curr = null;
+                    break;
+                }
+            } else {
+                set.add(data);
+                curr = curr.next;
+            }
+        }
+        return head;
     }
 
-    public static List<Integer> oddNumbers(int l, int r) {
-        // Write your code here
-        List<Integer> ret = new ArrayList<>();
-        for (int i = l; i <= r; i++) {
-            if (i % 2 == 1) ret.add(i);
-        }
-
-        return ret;
+    private class SinglyLinkedListNode {
+        int data;
+        SinglyLinkedListNode next;
     }
-
 }
