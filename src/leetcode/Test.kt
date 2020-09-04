@@ -2,8 +2,8 @@ package leetcode
 
 fun main() {
     // to test out in console
-    val test = LargestRectangleInHistogram()
-    val ans = test.largestRectangleArea(intArrayOf(2, 1, 2))
+    val test = TaskScheduler()
+    val ans = test.leastInterval(charArrayOf('A','A','A','B','B','B'), 2)
 
     println(ans)
 }
